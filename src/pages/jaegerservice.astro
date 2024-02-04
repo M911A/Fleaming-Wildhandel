@@ -1,0 +1,138 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+import TribbleContent from '../components/TribbleContent.astro';
+import OeffnungzeitenAnschrift from '../components/OeffnungszeitenAnschrift.astro'
+import InformationsPickture from '../components/Informations-Pickture.astro';
+import Maps from '../components/Maps.astro';
+import ImgTextImg from '../components/ImgTextImg.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>Jägerservice</h2>
+		<div class="section">
+			<div class="section-left">
+                Lieber Jagdfreund,<br><br>
+                ohne Ihre tatkräftige Unterstützung wären wir sicher nicht so erfolgreich. 
+                Ihnen haben wir es zu verdanken, dass wir rund ums Jahr Wild zur Verarbeitung 
+                zur Verfügung haben und damit auch dem Endverbraucher anbieten können. Aus diesem 
+                Grund sind wir auch stets daran interessiert ein stabiler und zuverlässiger Abnehmer 
+                und Partner für Sie zu sein.<br><br>
+                Seit der Gründung unseres Unternehmens sind wir täglich und auch an Feiertagen 
+                für Sie da und nehmen Ihnen Ihre "Beute" ab.
+                <br><br><br>
+                <h5>Unsere Annahmezeiten: </h5>
+                <div>
+                    <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+                    <a>Montag bis Freitag von 7 bis 17 Uhr</a>
+                </div>
+                <div>
+                    <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+                    <a>Samstag von 8 bis 12 Uhr</a>
+                        
+                </div>
+                <div>
+                    <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+                    <a>Sonntag von 9 bis 11 Uhr</a>
+                </div>
+                <br><br>
+                <h5>Zusätzlicher Service:</h5>
+                Sie möchten Ihr erlegtes Wild gern selbst auf Ihren Tisch zaubern, scheuen aber das 
+                fachgerechte Zerwirken. Kein Problem. Wir übernehmen gern auch Lohnarbeiten und bereiten 
+                Ihr Stück nach Ihren Wünschen auf. Sie können dann einfach die küchenfertigen Teile 
+                vakuumverpackt mit nach Hause nehmen.
+                Seit vielen Jahren vermitteln wir auch Präparationsarbeiten. Egal ob Sie Geweih, Gehörn oder 
+                Waffen aufsetzen, Felle gerben oder sonst etwas präparieren lassen wollen, wir ver­mitteln diese 
+                Arbeiten gern an jemanden, der sich damit auskennt.
+
+			</div>
+			<div class="section-right">
+				<img src="/public/Flotte.jpg" alt="Bild">
+                <img src="/public/reheAnnahme.jpg" alt="Bild">
+                <img src="/public/Rücken.jpg" alt="Bild">
+                <img src="/public/Tisch.jpg" alt="Bild">
+                <img src="/public/Verpackung.jpg" alt="Bild">
+				<!-- <div class="responsive_video">
+					<iframe width="560" height="315" 
+					src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					allowfullscreen></iframe>
+				</div> -->
+			</div>
+		</div>
+	</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.section {
+		/* background-color: aquamarine; */
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		
+		margin-bottom: 10%;
+	}
+
+	.section-left {
+		width: 60%;
+		text-align: justify;
+	}
+
+	.section-right {
+		width: 35%;
+	}
+
+	.responsive_video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+	.responsive_video iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+    .arrow-right {
+        vertical-align: middle; 
+        height: 20px;
+    }
+
+	@media (max-width: 720px) {
+		.section {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.section-left, .section-right {
+			width: 100%;
+		}
+
+		.section-left {
+			margin-bottom: 15%;
+		}
+	}
+</style>

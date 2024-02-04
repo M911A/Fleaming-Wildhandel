@@ -22,6 +22,10 @@ const jahr = today.getFullYear();
 	</div>
 	<div style="padding-top: 30px">
 		@{jahr} copyright by Mika Griebsch
+		<br>
+		<a class="impressum" href="/impressum">Impressum</a>
+		<a class="impressum"> | </a>
+		<a class="datenschutz" href="/datenschutz">Datenschutz</a>
 	</div>
 </footer>
 <style>
@@ -69,11 +73,19 @@ const jahr = today.getFullYear();
 
 	@media (max-width: 720px) {
 		footer {
-			flex-direction: column;
+			display: flex;
+			flex-direction: column; !important
 		}
 		.footer-element {
 			width: 100%;
 			margin-top: 20px;
 		}
+		.main {
+			flex-direction: column;
+		}
+	}
+	
+	.datenschutz, .impressum {
+		font-size: smaller;
 	}
 </style>

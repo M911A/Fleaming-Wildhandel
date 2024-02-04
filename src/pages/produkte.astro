@@ -1,0 +1,148 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+import TribbleContent from '../components/TribbleContent.astro';
+import OeffnungzeitenAnschrift from '../components/OeffnungszeitenAnschrift.astro'
+import InformationsPickture from '../components/Informations-Pickture.astro';
+import Maps from '../components/Maps.astro';
+import ImgTextImg from '../components/ImgTextImg.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>Unsere Produkte</h2>
+		<div class="section">
+			<div class="section-left">
+                Wildfleisch steht mit rund einem Prozent des gesamten Fleischkonsums der Deutschen 
+                eher selten auf dem Speiseplan, erfreut sich aber zunehmender Beliebtheit. Selbst
+                beim Discounter kann man Wildbret fast ganzjährig kaufen. Die dort angebotenen 
+                Produkte sind allerdings bisher häufig Importe aus Ländern wie Polen, Argentinien, 
+                Neuseeland und Australien oder stammen aus Gatterhaltung.
+                Die Produkte des Fläming-Wildhandel stammen hundertprozentig von frei lebenden 
+                Wild­tieren aus einheimischen Revieren rund um unseren Verarbeitungsstandort.
+                Weil das Angebot sich nach den Jagdzeiten der jeweiligen Wildart richtet, können 
+                wir nicht zu jeder Jahreszeit alle Produkte frisch anbieten, können aber 
+                gegebenenfalls auf tief­gekühlte Ware zurückgreifen.   
+                Dennnoch können wir Ihnen nahezu ganzjährig eine Fülle von Produkten anbieten. 
+                Sie können zwischen den Wildarten: Hirsch (Rot- und Damwild), Reh, und Wildschwein 
+                wäh­len. Auch Mufflon steht zeitweise zum Kauf bereit.
+                Von diesen Tieren bieten wir Ihnen vornehmlich Keulen, Blätter, Rücken, Nacken - 
+                mit oder ohne Knochen - an. Darüber hinaus stellen wir Rollbraten, Gulasch und 
+                Eisbein her.              
+                Vorrangig in den Wintermonaten erweitern wir unser Sortiment zusätzlich um 
+                raffinierte Wurstspezialitäten, die wir in Zusammenarbeit mit dem renommierten 
+                und EU-zugelassenen Fleischveredelungsbetrieb "Landfleischerei Lehmann"  aus
+                Trebbin entwickelt haben und dort herstellen lassen.
+                Hierzu zählen z. B. pikante Salami, knackige Bockwürstchen, herzhafte Knacker 
+                und saftige Wiener-Würstchen mit dem maximal möglichen Wildfleischanteil sowie 
+                edel rauchiger Wildschinken.               
+                Je nach Jagderfolg nehmen wir dann auch Feldhasen in unser Angebot auf.                
+                Nicht nur in der Grillsaison halten wir für Sie unsere beliebten Wildbratwürste bereit.                
+                Egal wofür Sie sich entscheiden, bei uns bekommen Sie immer einwandfreie 
+                küchenferti­ge Lebensmittel, die täglich kontrolliert werden und den strengen 
+                Anforderungen des Hygienerechts entsprechen.
+			</div>
+			<div class="section-right">
+                <img src="/public/rehSalami.jpg" alt="Bild">
+				<img src="/public/Filet.jpg" alt="Bild">
+                <img class="optional" src="/public/Gulasch.jpg" alt="Bild">
+                <img class="optional" src="/public/Leberwurst.jpg" alt="Bild">
+                <img class="optional" src="/public/Keule.jpg" alt="Bild">
+
+				<!-- <div class="responsive_video">
+					<iframe width="560" height="315" 
+					src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					allowfullscreen></iframe>
+				</div> -->
+
+                
+			</div>
+		</div>
+        <div class="naerwerte">
+            <h3>Närwerte</h3>
+            <img src="/public/naewerte.png" alt="Bild">
+			<h6>Quelle: Sousi, Fachmann, Kraut: Die Zusammensetzung der Lebensmittel, Nährwert-Tabellen, medpharm, Stuttgart, 2000</h6>
+        </div>
+	</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.section {
+		/* background-color: aquamarine; */
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		
+		margin-bottom: 10%;
+	}
+
+	.section-left {
+		width: 60%;
+		text-align: justify;
+	}
+
+	.section-right {
+		width: 35%;
+	}
+
+	.responsive_video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+	.responsive_video iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+    .section-right img {
+        margin-bottom: 10%;
+    }
+
+	@media (max-width: 720px) {
+		.section {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.section-left, .section-right {
+			width: 100%;
+		}
+
+		.section-left {
+			margin-bottom: 15%;
+		}
+
+        .optional {
+            display: none;
+        }
+
+        .naerwerte {
+            display: none;
+        }
+	}
+</style>

@@ -20,7 +20,7 @@
         flex-direction: row;
     }
     .card-left {
-        margin-right: 10px;
+        margin-right: 10%;
         text-align: right;
         /* background-color: aqua; */
     }
@@ -29,6 +29,17 @@
         text-align: left;
         margin-left: 10px;
         /* background-color: aqua; */
+    }
+
+    @media (max-width: 1080px) {
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-left, .card-right {
+            margin-bottom: 10%;
+        }
     }
 </style>
 

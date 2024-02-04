@@ -10,7 +10,7 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/ueberUns">Über uns</HeaderLink>
 			<HeaderLink href="/produkte">Produkte</HeaderLink>
-			<HeaderLink href="/hofladen">Hof & Hofladen</HeaderLink>
+			<HeaderLink href="/jaegerservice">Jägerservice</HeaderLink>
 			<!-- <HeaderLink href="/hofladen">Test</HeaderLink> -->
 		</div>
 		<div class="social-links">
@@ -19,7 +19,8 @@ import { SITE_TITLE } from '../consts';
 				<img src="/public/instagram.svg" aria-hidden="true" width="32" height="32">
 			</a>
 		</div>
-		<div class="hamburger-icon">&#9776;</div> <!-- Hamburger icon for mobile -->
+		<div class="hamburger-icon">&#9776;</div> 
+		<img src="/public/logo.png" alt="Logo Mobile" class="logo-mobile">
 	</nav>
 </header>
 <style>
@@ -32,6 +33,10 @@ import { SITE_TITLE } from '../consts';
 	h2 {
 		margin: 0;
 		font-size: 1em;
+	}
+
+	.logo-mobile {
+		display: none;
 	}
 
 	h2 a,
@@ -95,6 +100,16 @@ import { SITE_TITLE } from '../consts';
 			border-radius: 5px;
 			width: 50%;
 			margin: 0 auto;
+		}
+
+		header {
+			height: 60px;
+		}
+
+		.logo-mobile {
+			display: block;
+			height: 50px;
+			padding: 5px;
 		}
 	}
 
