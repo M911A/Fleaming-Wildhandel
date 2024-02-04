@@ -1,0 +1,79 @@
+---
+const today = new Date();
+const jahr = today.getFullYear(); 
+---
+
+<footer style="color: var(--black);">
+	<div class="main">
+		<div class="footer-element">
+			<a class="footer-header">Unsere Hofladen-Öffnungszeiten</a><br>
+			<!-- <h5>Unsere Hofladen-Öffnungszeiten</h5> -->
+			Montag - Freitag: 7 bis 17 Uhr<br>
+			Samstag: 8 bis 12 Uhr <br>
+			Sonntag: 9 bis 11 Uhr
+		</div>
+		<div class="footer-element">
+			<a class="footer-header">Kontakt</a><br>
+			Jan Griebsch
+			Fläming-Wildhandel<br>			
+			Tel.: 033 748 / 155 97 <br>
+			Mail: info@flaeming-wildhandel.de
+		</div>
+	</div>
+	<div style="padding-top: 30px">
+		@{jahr} copyright by Mika Griebsch
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 2em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.main {
+		/* background-color: rgb(119, 82, 33); */
+		display: flex;
+		flex-direction: row;
+		/* align-items: center; */
+		justify-content: center;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+
+	.footer-element {
+		height: auto;
+		width: 30%;
+		color: #212939;
+	}
+
+	.footer-header {
+		color: var(--accent);
+		font-weight: 700;
+	}
+
+	@media (max-width: 720px) {
+		footer {
+			flex-direction: column;
+		}
+		.footer-element {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+</style>

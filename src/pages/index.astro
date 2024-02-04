@@ -1,0 +1,43 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+import TribbleContent from '../components/TribbleContent.astro';
+import OeffnungzeitenAnschrift from '../components/OeffnungszeitenAnschrift.astro'
+import InformationsPickture from '../components/Informations-Pickture.astro';
+import Maps from '../components/Maps.astro';
+import ImgTextImg from '../components/ImgTextImg.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<div class="banner">
+			<img src="/public/banner.jpg">
+		</div>
+		<main>
+			<h2>Wildbret - küchenfertig für Gastronomie, Groß- und Einzelhandel</h2>
+			<InformationsPickture />
+			<br><br><br><br>
+			<h2>Einige unserer "Kostproben"</h2>
+			<Carousel />
+			
+		</main>
+		<TribbleContent />
+		<main>
+			<OeffnungzeitenAnschrift />
+		</main>
+		<ImgTextImg />
+		<main>
+			<h2>Unser Standort</h2>
+			<Maps />
+		</main>
+		<Footer />
+	</body>
+</html>

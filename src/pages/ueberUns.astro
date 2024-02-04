@@ -1,0 +1,108 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+import TribbleContent from '../components/TribbleContent.astro';
+import OeffnungzeitenAnschrift from '../components/OeffnungszeitenAnschrift.astro'
+import InformationsPickture from '../components/Informations-Pickture.astro';
+import Maps from '../components/Maps.astro';
+import ImgTextImg from '../components/ImgTextImg.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>Fläming Wildhandel - Der zertifizierte EU-BETRIEB</h2>
+		<div class="section">
+			<div class="section-left">
+					Wir, der familiengeführte Fläming-Wildhandel aus dem brandenburgischen Bardenitz, 
+					bieten Ihnen seit mehr als 30 Jahren Fachkompetenz und Know-How in der Zerlegung 
+					und Lieferung einheimischen Wildbrets, wie Reh, Rot- und Damwild und Wildschwein.
+					Der Fläming-Wildhandel ist seit Unternehmensgründung darauf spezialisiert
+					küchenfertig zerlegtes und vorgehäutetes Wildbret zu produzieren. Selbstverständlich 
+					erfolgt die Herstellung unter täglicher veterinärmedizinischer Überwa­chung und nach 
+					den Vorgaben des EU-Lebensmittelrechts. Die Ware verlässt unser Haus stets in 
+					Vakuumverpackung und nach unseren strengen Qualitätsstandards.
+					Unser erfahrenes Team sorgt unter modernsten Produktionsbedingungen und Umsetzung von 
+					EU-Standards für gleichbleibend hohe Qualität im Frische- und Tiefkühlbereich. Unsere
+					Produkte bieten wir insbesondere für Gastronomie, Groß- und Einzelhandel an. Im Servicebereich 
+					erhalten Sie von uns fachkundige Beratung, termingerechte Lieferung und vieles mehr rund ums Wild.
+					Nicht zuletzt macht uns die Empfehlung unseres Betriebes und der "ausgezeichneten" Produkte 
+					in den vergangenen Jahren durch die Fachzeitschrift "Der Feinschmecker" zurecht stolz auf das, 
+					was wir täglich für Sie produzieren.
+					Wir stehen Ihnen jeder Zeit gern unter der Servicenummer 033748 15597 zur Verfügung!
+			</div>
+			<div class="section-right">
+				<img src="/public/Team.jpg" alt="Team Bild">
+				<div class="responsive_video">
+					<iframe width="560" height="315" 
+					src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.section {
+		/* background-color: aquamarine; */
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		
+		margin-bottom: 10%;
+	}
+
+	.section-left {
+		width: 60%;
+		text-align: justify;
+	}
+
+	.section-right {
+		width: 35%;
+	}
+
+	.responsive_video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+	.responsive_video iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	@media (max-width: 720px) {
+		.section {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.section-left, .section-right {
+			width: 100%;
+		}
+	}
+</style>

@@ -1,0 +1,121 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<nav>
+		<img class="logo" src="/public/logo.png" alt="Logo Fleaming Wildhandel">
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/ueberUns">Über uns</HeaderLink>
+			<HeaderLink href="/produkte">Produkte</HeaderLink>
+			<HeaderLink href="/hofladen">Hof & Hofladen</HeaderLink>
+			<!-- <HeaderLink href="/hofladen">Test</HeaderLink> -->
+		</div>
+		<div class="social-links">
+			<a class="icon" href="https://www.instagram.com/flaeming_wildhandel/" target="_blank">
+				<span class="sr-only">Unser Instagram Account</span>
+				<img src="/public/instagram.svg" aria-hidden="true" width="32" height="32">
+			</a>
+		</div>
+		<div class="hamburger-icon">&#9776;</div> <!-- Hamburger icon for mobile -->
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+	}
+	.hamburger-icon {
+		display: none; 
+		cursor: pointer;
+		font-size: 1.5em;
+	}
+	@media (max-width: 1080px) {
+		.social-links {
+			display: none;
+		}
+		.logo {
+			display: none;
+		}
+		.hamburger-icon {
+			display: block;
+		}
+		.internal-links {
+			display: none; 
+			flex-direction: column;
+			position: absolute;
+			top: 60px;
+			left: 0;
+			width: 100%;
+			background: white;
+			box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		}
+		.internal-links a {
+			padding: 1em;
+			text-align: center;
+		}
+		.internal-links.show {
+			display: flex; 
+		}
+		nav a.active {
+			text-decoration: none;
+			border-bottom-color: var(--accent);
+			border-radius: 5px;
+			width: 50%;
+			margin: 0 auto;
+		}
+	}
+
+	.icon {
+		margin-left: 200px;
+	}
+
+	.logo {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const hamburgerIcon = document.querySelector('.hamburger-icon');
+		const internalLinks = document.querySelector('.internal-links');
+
+		hamburgerIcon.addEventListener('click', () => {
+			internalLinks.classList.toggle('show');
+		});
+	});
+</script>
+
