@@ -7,6 +7,7 @@ import TribbleContent from '../components/TribbleContent.astro';
 import OeffnungzeitenAnschrift from '../components/OeffnungszeitenAnschrift.astro'
 import InformationsPickture from '../components/Informations-Pickture.astro';
 import Maps from '../components/Maps.astro';
+import Partner from '../components/Partner.astro';
 import ImgTextImg from '../components/ImgTextImg.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
@@ -19,7 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<div class="banner">
-			<img src="/public/banner.jpg">
+			<img class="banner" src="/public/banner.jpg">
 		</div>
 		<main>
 			<h2>Wildbret - küchenfertig für Gastronomie, Groß- und Einzelhandel</h2>
@@ -31,6 +32,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		</main>
 		<TribbleContent />
 		<main>
+			<h2>Wir sind Mitgleid</h2>
+			<Partner />
 			<OeffnungzeitenAnschrift />
 		</main>
 		<ImgTextImg />
@@ -43,3 +46,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.banner {
+		border-radius: 0px;
+	}
+</style>

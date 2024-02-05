@@ -1,0 +1,94 @@
+<header>
+    <div class="element-left">
+        <img src="/public/offenehoefe.jpg" alt="Laden Bild">
+        <img src="/public/echtFlaeming.jpg" alt="Echt Fläming Bild">
+    </div>
+    <div class="element-right">
+        <div>
+            <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+            <a href="https://www.offenehoefe.de/" target="_blank" >Projekt "Offene Höfe"</a> <br>
+            Gemeinsam, miteinander, füreinander …  , vom Anbauer und Erzeuger, über den Verarbeiter 
+            bis hin zum Gastronomiebetrieb … die verschiedensten Netzwerkpartner, die miteinander 
+            agieren.
+        </div>
+        <br><br><br>
+        <div>
+            <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+            <a href="https://www.echt-flaeming.de/" target="_blank">Die Regionalmarke: Echt Fläming</a><br>
+            “ECHT Fläming” ist eine Regionalmarke, die die Zusammenarbeit von Landwirten, 
+            Lebensmittelproduzenten, Verarbeitern, Gastronomen, Händlern, Dienstleistern und Vereinen 
+            in der Fläming-Region darstellt und fördert.
+        </div>
+        <br><br><br>
+    </div>
+    <div class="mobile">
+        <div>
+            <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+            <a href="https://www.offenehoefe.de/" target="_blank" >Projekt "Offene Höfe"</a> <br>
+            Gemeinsam, miteinander, füreinander …  , vom Anbauer und Erzeuger, über den Verarbeiter 
+            bis hin zum Gastronomiebetrieb … die verschiedensten Netzwerkpartner, die miteinander 
+            agieren.
+        </div>
+        <br>
+        <img src="/public/offenehoefe.jpg" alt="Laden Bild">
+        <br><br>
+        <div>
+            <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
+            <a href="https://www.echt-flaeming.de/" target="_blank">Die Regionalmarke: Echt Fläming</a><br>
+            “ECHT Fläming” ist eine Regionalmarke, die die Zusammenarbeit von Landwirten, 
+            Lebensmittelproduzenten, Verarbeitern, Gastronomen, Händlern, Dienstleistern und Vereinen 
+            in der Fläming-Region darstellt und fördert.
+        </div>
+        <br>
+        <img src="/public/echtFlaeming.jpg" alt="Echt Fläming Bild">
+        <br>
+    </div>
+</header>
+<style>
+    header {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .element-left, .element-right {
+        display: flex;
+        flex-direction: column;
+    }
+    .element-left {
+        width: 35%;
+    }
+    .element-left img {
+        margin-bottom: 10px;
+    }
+    .element-right {
+        width: 65%;
+        margin-right: 15px;
+    }
+    .element-right div {
+        /* background-color:aqua;  */
+        padding-bottom: 5px;
+    }
+
+    .arrow-right {
+        vertical-align: middle; 
+        height: 20px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    @media (max-width: 720px) {
+		header {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .element-left, .element-right {
+            display: none;
+        }
+        
+        .mobile {
+            display: flex;
+            flex-direction: column;
+        }
+	}
+</style>

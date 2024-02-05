@@ -1,0 +1,121 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Carousel from '../components/Carousel.astro';
+import TribbleContent from '../components/TribbleContent.astro';
+import OeffnungzeitenAnschrift from '../components/OeffnungszeitenAnschrift.astro'
+import InformationsPickture from '../components/Informations-Pickture.astro';
+import Maps from '../components/Maps.astro';
+import ImgTextImg from '../components/ImgTextImg.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>Unser Hofladen - Ausgezeichnete Produkte in rustikalem Ambiente...</h2>
+		<div class="section">
+			<div class="section-left">
+                Unsere Produkte sind küchenfertig für die Weiterverarbeitung aufbereitet. Wählen Sie 
+                nach Verfügbarkeit zwischen den Wildarten Reh-, Rot-, Dam- und Schwarzwild. Alle 
+                Tiere stammen aus freier Wildbahn unserer Region und garantieren eine gesunde und 
+                genussreiche Ernährung nach heutigen Ansprüchen. Unser Angebot wird abgerundet durch 
+                ein ausgewähltes Sortiment an pikanter Wurst und feinstem Schinken. Ergänzend führen 
+                wir kulinarische Helfer rund ums Kochen von Wild von unseren Projektpartnern der 
+                "Offenen Höfe" und "Echt Fläming" und ausgesuchte Weine.<br><br>
+                <a>Wir freuen uns auf Ihren Besuch!</a>
+			</div>
+			<div class="section-right">
+                <img src="/public/Laden.jpg" alt="Bild">
+				<img src="/public/Laden2.jpg" alt="Bild">
+                <!-- <img src="/public/wagen.jpg" alt="Bild"> -->
+                <img src="/public/partyraum.jpg" alt="Bild">
+				<!-- <div class="responsive_video">
+					<iframe width="560" height="315" 
+					src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
+					title="YouTube video player" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					allowfullscreen></iframe>
+				</div> -->
+
+                
+			</div>
+		</div>
+	</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.section {
+		/* background-color: aquamarine; */
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		
+		margin-bottom: 10%;
+	}
+
+	.section-left {
+		width: 60%;
+		text-align: justify;
+	}
+
+	.section-right {
+		width: 35%;
+	}
+
+	.responsive_video {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+	.responsive_video iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+    .section-right img {
+        margin-bottom: 10%;
+    }
+
+	@media (max-width: 720px) {
+		.section {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.section-left, .section-right {
+			width: 100%;
+		}
+
+		.section-left {
+			margin-bottom: 15%;
+		}
+
+        .optional {
+            display: none;
+        }
+
+        .naerwerte {
+            display: none;
+        }
+	}
+</style>

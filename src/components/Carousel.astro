@@ -132,7 +132,7 @@
 
 <script>
 let totalSlides = document.querySelectorAll('.mySlides').length;
-let slideIndex = 1;
+let slideIndex = 0;
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
@@ -141,22 +141,22 @@ function plusSlides(n) {
 function showSlides(n) {
     let i;
     const slides = document.getElementsByClassName("mySlides");
-    
-    if (n > totalSlides) {
-        slideIndex = 1;
+
+    if (n >= totalSlides) {
+        slideIndex = 0;
     }    
-    if (n < 1) {
-        slideIndex = totalSlides;
+    if (n < 0) {
+        slideIndex = totalSlides - 1;
     }
-    
+
     for (i = 0; i < totalSlides; i++) {
         slides[i].style.display = "none";  
     }
-    
-    slides[slideIndex - 1].style.display = "block";  
+
+    slides[slideIndex].style.display = "block";  
 }
 
-// Show the first slide when the page loads
+// Zeige den ersten Slide beim Laden der Seite
 showSlides(slideIndex);
 
 // Automatisches Wechseln der Slides alle 5 Sekunden
