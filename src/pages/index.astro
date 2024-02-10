@@ -30,9 +30,7 @@ import Overlay from '../components/Overlay.astro';
 			<Carousel />
 			<br>
 		</main>
-		<main style="padding:0">
-			<h2>Team Fläming Wild - Was wir tun</h2>
-		</main>  
+		<h2 class="h2">Team Fläming Wild - Was wir tun</h2>  
 		<TribbleContent />
 		<main>
 			<h2>Stark regional</h2>
@@ -54,5 +52,15 @@ import Overlay from '../components/Overlay.astro';
 	.banner {
 		border-radius: 0px;
 		width: 100vw;
+	}
+	.h2 {
+		margin-left: 36%;
+	}
+
+	@media (max-width: 750px) {
+		.h2 {
+			margin-left:4%;
+			margin-right: 4%;
+		}
 	}
 </style>
