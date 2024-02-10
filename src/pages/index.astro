@@ -45,6 +45,11 @@ import Overlay from '../components/Overlay.astro';
 			<br>
 		</main>
 		<Footer />
+
+        <!-- Instagram Button -->
+        <a href=https://www.instagram.com/flaeming_wildhandel/" target="_blank" class="instagram-button">
+            <img src="/public/Instagram_icon.png" alt="Instagram" class="instagram-logo">
+        </a>
 	</body>
 </html>
 
@@ -63,4 +68,20 @@ import Overlay from '../components/Overlay.astro';
 			margin-right: 4%;
 		}
 	}
+	@media (min-width: 750px) {
+		.instagram-button, .instagram-logo {
+			display: none;
+		}
+	}
+    .instagram-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+    .instagram-logo {
+        width: 45px; 
+        height: auto;
+    }
 </style>

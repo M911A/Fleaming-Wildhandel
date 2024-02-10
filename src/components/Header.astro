@@ -13,9 +13,10 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/jaegerservice">Jägerservice</HeaderLink>
 		</div>
 		<div class="social-links">
+			<a href="https://www.instagram.com/flaeming_wildhandel/" target="_blank" class="icon-description">Folge uns!</a>
 			<a class="icon" href="https://www.instagram.com/flaeming_wildhandel/" target="_blank">
 				<span class="sr-only">Unser Instagram Account</span>
-				<img src="/public/instagram.svg" aria-hidden="true" width="32" height="32">
+				<img src="/public/Instagram_icon.png" aria-hidden="true" width="32" height="32">
 			</a>
 		</div>
 		<div class="hamburger-icon">&#9776;</div> 
@@ -23,6 +24,14 @@ import HeaderLink from './HeaderLink.astro';
 	</nav>
 </header>
 <style>
+	.icon {
+		margin-left: 0 !important;
+	}
+
+	.icon-description {
+		font-weight: 700;
+	}
+
 	header {
 		margin: 0;
 		padding: 0 1em;
