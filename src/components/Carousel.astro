@@ -119,35 +119,34 @@
 </style>
 
 <script>
-let totalSlides = document.querySelectorAll('.mySlides').length;
-let slideIndex = 0;
+    let totalSlides;
+    let slideIndex = 0;
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    const slides = document.getElementsByClassName("mySlides");
-
-    slideIndex += n;
-
-    if (slideIndex >= totalSlides) {
-        slideIndex = 0;
-    }    
-    if (slideIndex < 0) {
-        slideIndex = totalSlides - 1;
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
     }
 
-    for (let i = 0; i < totalSlides; i++) {
-        slides[i].style.display = "none";  
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("mySlides");
+        totalSlides = slides.length;
+
+        if (n >= totalSlides) {
+            slideIndex = 0;
+        }    
+        if (n < 0) {
+            slideIndex = totalSlides - 1;
+        }
+
+        for (let i = 0; i < totalSlides; i++) {
+            slides[i].style.display = "none";  
+        }
+
+        slides[slideIndex].style.display = "block";  
     }
 
-    slides[slideIndex].style.display = "block";  
-}
-showSlides(slideIndex);
+    showSlides(slideIndex);
 
-setInterval(function() {
-    plusSlides(1);
-}, 5000);
-
+    setInterval(function() {
+        plusSlides(1);
+    }, 5000);
 </script>
