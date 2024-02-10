@@ -61,26 +61,21 @@
             <img src="/public/Schmalz.jpg" style="width:100%">
         </div>
     
-        <!-- Navigation -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
     </div>
 </main>
 
 <style>
-    /* Slideshow container */
 .slideshow-container {
     max-width: 100%;
     margin-top: -5%;
     position: relative;
   }
   
-  /* Hide the images by default */
   .mySlides {
     display: none;
   }
-  
-  /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -96,18 +91,14 @@
     user-select: none;
   }
   
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
-  
-  /* Caption text */
   .text {
     color: #c83a3a;
     font-size: 15px;
@@ -118,7 +109,6 @@
     text-align: center;
   }
   
-  /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -126,8 +116,6 @@
     position: absolute;
     top: 0;
   }
-
-
 </style>
 
 <script>
@@ -139,27 +127,25 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-    let i;
     const slides = document.getElementsByClassName("mySlides");
 
-    if (n >= totalSlides) {
+    slideIndex += n;
+
+    if (slideIndex >= totalSlides) {
         slideIndex = 0;
     }    
-    if (n < 0) {
+    if (slideIndex < 0) {
         slideIndex = totalSlides - 1;
     }
 
-    for (i = 0; i < totalSlides; i++) {
+    for (let i = 0; i < totalSlides; i++) {
         slides[i].style.display = "none";  
     }
 
     slides[slideIndex].style.display = "block";  
 }
-
-// Zeige den ersten Slide beim Laden der Seite
 showSlides(slideIndex);
 
-// Automatisches Wechseln der Slides alle 5 Sekunden
 setInterval(function() {
     plusSlides(1);
 }, 5000);
