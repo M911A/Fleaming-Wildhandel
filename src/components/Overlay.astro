@@ -1,39 +1,37 @@
 ---
 import { overlayUrl } from "../consts";
-
 const imageUrl = '/public/banner.jpg';
 let isOpen = true;
 ---
 
 <fragment>
-    <button id="overlay-toggle" class={`overlay-toggle ${isOpen ? 'open' : ''}`}>
-        {isOpen && <span class="close">X</span>}
-    </button>
-    {isOpen && (
-        <div class="overlay">
-            <div class="overlay-content">
-          <img class="overlay-img" src={overlayUrl} alt="Overlay Image" />
-        </div>
+  <button id="overlay-toggle" class={`overlay-toggle ${isOpen ? 'open' : ''}`}>
+    {isOpen && <span class="close">X</span>}
+  </button>
+  {isOpen && (
+    <div class="overlay">
+      <div class="overlay-content">
+        <img class="overlay-img" src={overlayUrl} alt="Overlay Image" />
       </div>
-    )}
-  </fragment>
+    </div>
+  )}
+</fragment>
   
-  <script>
-    let isOpen = true; 
-    const toggleOverlay = () => {
-        isOpen = !isOpen;
-        render(); // Funktion render aufrufen, um das HTML neu zu rendern
-    };
+<script>
+  let isOpen = true; 
+  const toggleOverlay = () => {
+    isOpen = !isOpen;
+    render(); // Funktion render aufrufen, um das HTML neu zu rendern
+  };
 
-    const render = () => {
-        const overlayToggle = document.getElementById('overlay-toggle');
-        const overlay = document.querySelector('.overlay');
+  const render = () => {
+    const overlayToggle = document.getElementById('overlay-toggle');
+    const overlay = document.querySelector('.overlay');
+    overlayToggle.classList.toggle('open', isOpen); 
+    overlay.style.display = isOpen ? 'flex' : 'none';
+  };
 
-        overlayToggle.classList.toggle('open', isOpen); // CSS-Klasse hinzufügen oder entfernen basierend auf isOpen
-        overlay.style.display = isOpen ? 'flex' : 'none'; // Overlay anzeigen oder ausblenden basierend auf isOpen
-    };
-
-    document.getElementById('overlay-toggle').addEventListener('click', toggleOverlay);
+  document.getElementById('overlay-toggle').addEventListener('click', toggleOverlay);
 </script>
 
 
