@@ -29,6 +29,15 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: 'Courgette', cursive;
+	src: url('https://fonts.googleapis.com/css2?family=Courgette&display=swap') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
@@ -47,6 +56,7 @@ main {
 	max-width: calc(100% - 2em);
 	margin: auto;
 	padding: 3em 1em;
+	/* background-color: #A8B400; */
 }
 h1,
 h2,
@@ -57,6 +67,7 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
 	line-height: 1.2;
+	font-family: 'Courgette', cursive;
 }
 h1 {
 	font-size: 3.052em;
