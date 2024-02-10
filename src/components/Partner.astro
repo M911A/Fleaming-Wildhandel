@@ -1,6 +1,7 @@
 <header>
-    <div class="element-left">
-        <img src="/public/offenehoefe.jpg" alt="Laden Bild">
+    <div class="element-left"><br>
+        <img src="/public/Logo_OHe_Internet.jpg" alt="Laden Bild">
+        <br><br><br><br>
         <img src="/public/echtFlaeming.jpg" alt="Echt Fläming Bild">
     </div>
     <div class="element-right">
@@ -30,7 +31,7 @@
             agieren.
         </div>
         <br>
-        <img src="/public/offenehoefe.jpg" alt="Laden Bild">
+        <img class="logo" src="/public/Logo_OHe_Internet.jpg" alt="Laden Bild">
         <br><br>
         <div>
             <img class="arrow-right" src="/public/arrow-right-box.svg" alt="Pfeil Rechts">
@@ -40,7 +41,7 @@
             in der Fläming-Region darstellt und fördert.
         </div>
         <br>
-        <img src="/public/echtFlaeming.jpg" alt="Echt Fläming Bild">
+        <img class="logo" src="/public/echtFlaeming.jpg" alt="Echt Fläming Bild">
         <br>
     </div>
 </header>
@@ -77,6 +78,11 @@
         display: none;
     }
 
+    .logo {
+        width: 80%;
+        height: auto;
+    }
+
     @media (max-width: 720px) {
 		header {
             display: flex;
@@ -89,6 +95,8 @@
         .mobile {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 	}
 </style>
