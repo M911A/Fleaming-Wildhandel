@@ -20,7 +20,7 @@ import Overlay from '../components/Overlay.astro';
 	</head>
 	<body>
 		<Header />
-		<Overlay overlayUrl={overlayUrl} />
+		<!-- <Overlay overlayUrl={overlayUrl} /> -->
 		<img class="banner" src="/public/banner.jpg">
 		<main>
 			<h2>Wildbret - küchenfertig für Gastronomie und Feinkost</h2>
@@ -30,10 +30,9 @@ import Overlay from '../components/Overlay.astro';
 			<Carousel />
 			<br>
 		</main>
-		<main>
+		<main style="padding:0">
 			<h2>Team Fläming Wild - Was wir tun</h2>
 		</main>  
-		<!-- Abstand!!! -->
 		<TribbleContent />
 		<main>
 			<h2>Stark regional</h2>
