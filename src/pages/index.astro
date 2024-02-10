@@ -9,7 +9,8 @@ import InformationsPickture from '../components/Informations-Pickture.astro';
 import Maps from '../components/Maps.astro';
 import Partner from '../components/Partner.astro';
 import ImgTextImg from '../components/ImgTextImg.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, overlayUrl } from '../consts';
+import Overlay from '../components/Overlay.astro';
 ---
 
 <!doctype html>
@@ -19,9 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<div class="banner">
-			<img class="banner" src="/public/banner.jpg">
-		</div>
+		<Overlay overlayUrl={overlayUrl} />
 		<main>
 			<h2>Wildbret - küchenfertig für Gastronomie, Groß- und Einzelhandel</h2>
 			<InformationsPickture />
@@ -32,7 +31,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		</main>
 		<TribbleContent />
 		<main>
-			<h2>Wir sind Mitgleid</h2>
+			<h2>Wir sind Mitglied</h2>
 			<Partner />
 			<OeffnungzeitenAnschrift />
 		</main>

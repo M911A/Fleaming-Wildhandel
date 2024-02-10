@@ -1,0 +1,82 @@
+---
+import { overlayUrl } from "../consts";
+
+const imageUrl = '/public/banner.jpg';
+let isOpen = true;
+---
+
+<fragment>
+    <button id="overlay-toggle" class={`overlay-toggle ${isOpen ? 'open' : ''}`}>
+        {isOpen && <span class="close">X</span>}
+    </button>
+    {isOpen && (
+        <div class="overlay">
+            <div class="overlay-content">
+          <img class="overlay-img" src={overlayUrl} alt="Overlay Image" />
+        </div>
+      </div>
+    )}
+  </fragment>
+  
+  <script>
+    let isOpen = true; 
+    const toggleOverlay = () => {
+        isOpen = !isOpen;
+        render(); // Funktion render aufrufen, um das HTML neu zu rendern
+    };
+
+    const render = () => {
+        const overlayToggle = document.getElementById('overlay-toggle');
+        const overlay = document.querySelector('.overlay');
+
+        overlayToggle.classList.toggle('open', isOpen); // CSS-Klasse hinzufügen oder entfernen basierend auf isOpen
+        overlay.style.display = isOpen ? 'flex' : 'none'; // Overlay anzeigen oder ausblenden basierend auf isOpen
+    };
+
+    document.getElementById('overlay-toggle').addEventListener('click', toggleOverlay);
+</script>
+
+
+<style>
+  .overlay-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    /* height: 1000px; */
+  }
+  .overlay-toggle .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay-content {
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+  }
+  .overlay img {
+  max-width: 90vw; /* Doppelte Breite */
+  max-height: 90vh; /* Doppelte Höhe */
+  display: block;
+  margin: auto;
+}
+</style>
