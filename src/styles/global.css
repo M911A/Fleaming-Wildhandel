@@ -55,7 +55,9 @@ main {
 	width: 920px;
 	max-width: calc(100% - 2em);
 	margin: auto;
-	padding: 3em 1em;
+	/* padding: 3em 1em; */
+	padding-top: 2%;
+	/* padding-bottom: 2%; */
 	/* background-color: #A8B400; */
 }
 h1,
