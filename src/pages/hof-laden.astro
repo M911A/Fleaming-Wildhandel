@@ -16,34 +16,67 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<h2>
 			Ihr Besuch im Hofladen
 			</h2>
-		<div class="section">
-			<div class="section-left">
-                Unsere Produkte sind küchenfertig für die Weiterverarbeitung aufbereitet. Wählen Sie 
-                nach Verfügbarkeit zwischen den Wildarten Reh-, Rot-, Dam- und Schwarzwild. Alle 
-                Tiere stammen aus freier Wildbahn unserer Region und garantieren eine gesunde und 
-                genussreiche Ernährung nach heutigen Ansprüchen. Unser Angebot wird abgerundet durch 
-                ein ausgewähltes Sortiment an pikanter Wurst und feinstem Schinken. Ergänzend führen 
-                wir kulinarische Helfer rund ums Kochen von Wild von unseren Projektpartnern der 
-                "Offenen Höfe" und "Echt Fläming" und ausgesuchte Weine.<br><br>
-                <a>Wir freuen uns auf Ihren Besuch!</a>
-			</div>
-			<div class="section-right">
-                <img src="/public/Laden.jpg" alt="Bild">
-				<img src="/public/Laden2.jpg" alt="Bild">
-                <!-- <img src="/public/wagen.jpg" alt="Bild"> -->
-                <img src="/public/partyraum.jpg" alt="Bild">
-				<!-- <div class="responsive_video">
-					<iframe width="560" height="315" 
-					src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
-					title="YouTube video player" frameborder="0" 
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-					allowfullscreen></iframe>
-				</div> -->
+			<div class="section">
+				<div class="section-left">
+					Unsere Produkte sind küchenfertig für die Weiterverarbeitung aufbereitet. Wählen Sie 
+					nach Verfügbarkeit zwischen den Wildarten Reh-, Rot-, Dam- und Schwarzwild. Alle 
+					Tiere stammen aus freier Wildbahn unserer Region und garantieren eine gesunde und 
+					genussreiche Ernährung nach heutigen Ansprüchen. Unser Angebot wird abgerundet durch 
+					ein ausgewähltes Sortiment an pikanter Wurst und feinstem Schinken. Ergänzend führen 
+					wir kulinarische Helfer rund ums Kochen von Wild von unseren Projektpartnern der 
+					"Offenen Höfe" und "Echt Fläming" und ausgesuchte Weine.<br><br>
+					<a>Wir freuen uns auf Ihren Besuch!</a>
+				</div>
+				<div class="section-right">
+					<img src="/public/Laden.jpg" alt="Bild">
+					<img src="/public/Laden2.jpg" alt="Bild">
+					<!-- <img src="/public/wagen.jpg" alt="Bild"> -->
+					<img src="/public/partyraum.jpg" alt="Bild">
+					<!-- <div class="responsive_video">
+						<iframe width="560" height="315" 
+						src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
+						title="YouTube video player" frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						allowfullscreen></iframe>
+					</div> -->
 
-                
+					
+				</div>
 			</div>
-		</div>
-	</main>
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 14</div>
+					<img src="/public/aufTresen.jpeg" style="width:100%">
+				</div>
+			
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 14</div>
+					<img src="/public/hasWein.jpeg" style="width:100%">
+				</div>
+			
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 14</div>
+					<img src="/public/hrischHeinreichWinter.jpeg" style="width:100%">
+				</div>
+		
+				<div class="mySlides fade">
+					<div class="numbertext">4 / 14</div>
+					<img src="/public/SchneeBaenke.jpeg" style="width:100%">
+				</div>
+		
+				<div class="mySlides fade">
+					<div class="numbertext">5 / 14</div>
+					<img src="/public/schweinSchnee.jpeg" style="width:100%">
+				</div>
+		
+				<div class="mySlides fade">
+					<div class="numbertext">6 / 14</div>
+					<img src="/public/schweinSommer.jpeg" style="width:100%">
+				</div>			
+				<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+			</div>
+		</main>
 		<Footer />
 	</body>
 </html>
@@ -114,4 +147,82 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             display: none;
         }
 	}
+
+	.slideshow-container {
+    max-width: 100%;
+    margin-top: -5%;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+.text {
+    color: #c83a3a;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
 </style>
+
+<script>
+    let totalSlides;
+    let slideIndex = 0;
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("mySlides");
+        totalSlides = slides.length;
+        if (n >= totalSlides) {
+            slideIndex = 0;
+        }    
+        if (n < 0) {
+            slideIndex = totalSlides - 1;
+        }
+        for (let i = 0; i < totalSlides; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex].style.display = "block";  
+    }
+
+    showSlides(slideIndex);
+
+    setInterval(function() {
+        plusSlides(1);
+    }, 3000);
+</script>
