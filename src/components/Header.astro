@@ -104,11 +104,18 @@ import HeaderLink from './HeaderLink.astro';
 		.internal-links.show {
 			display: flex; 
 		}
+		nav a:hover {
+			border-bottom-color: var(--accent);
+			border-radius: 5px;
+			width: 50%;
+			margin: 0 auto;
+			transition: 0.5s;
+		}
 		nav a.active {
 			text-decoration: none;
 			border-bottom-color: var(--accent);
 			border-radius: 5px;
-			width: 50%;
+			width: 50vw;
 			margin: 0 auto;
 		}
 		header {
