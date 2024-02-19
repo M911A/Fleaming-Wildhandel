@@ -26,12 +26,55 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					wir kulinarische Helfer rund ums Kochen von Wild von unseren Projektpartnern der 
 					"Offenen Höfe" und "Echt Fläming" und ausgesuchte Weine.<br><br>
 					<a>Wir freuen uns auf Ihren Besuch!</a>
+					<br><br><br>
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 14</div>
+							<img src="/public/aufTresen.jpeg" style="width:100%">
+						</div>
+											
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 14</div>
+							<img src="/public/haken.jpeg" style="width:100%">
+						</div>
+											
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 14</div>
+							<img src="/public/hochsitz.jpeg" style="width:100%">
+						</div>
+											
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 14</div>
+							<img src="/public/likoer.jpg" style="width:100%">
+						</div>
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 14</div>
+							<img src="/public/hrischHeinreichWinter.jpeg" style="width:100%">
+						</div>
+				
+						<div class="mySlides fade">
+							<div class="numbertext">4 / 14</div>
+							<img src="/public/SchneeBaenke.jpeg" style="width:100%">
+						</div>
+				
+						<div class="mySlides fade">
+							<div class="numbertext">5 / 14</div>
+							<img src="/public/schweinSchnee.jpeg" style="width:100%">
+						</div>
+				
+						<div class="mySlides fade">
+							<div class="numbertext">6 / 14</div>
+							<img src="/public/schweinSommer.jpeg" style="width:100%">
+						</div>			
+						<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+					</div>
 				</div>
 				<div class="section-right">
 					<img src="/public/Laden.jpg" alt="Bild">
 					<img src="/public/Laden2.jpg" alt="Bild">
 					<!-- <img src="/public/wagen.jpg" alt="Bild"> -->
-					<img src="/public/partyraum.jpg" alt="Bild">
+					<!-- <img src="/public/partyraum.jpg" alt="Bild"> -->
 					<!-- <div class="responsive_video">
 						<iframe width="560" height="315" 
 						src="https://www.youtube.com/embed/lZBnZZp3i44?si=-mxUIhW4Zazh5oij" 
@@ -42,39 +85,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 					
 				</div>
-			</div>
-			<div class="slideshow-container">
-				<div class="mySlides fade">
-					<div class="numbertext">1 / 14</div>
-					<img src="/public/aufTresen.jpeg" style="width:100%">
-				</div>
-			
-				<div class="mySlides fade">
-					<div class="numbertext">2 / 14</div>
-					<img src="/public/hasWein.jpeg" style="width:100%">
-				</div>
-			
-				<div class="mySlides fade">
-					<div class="numbertext">3 / 14</div>
-					<img src="/public/hrischHeinreichWinter.jpeg" style="width:100%">
-				</div>
-		
-				<div class="mySlides fade">
-					<div class="numbertext">4 / 14</div>
-					<img src="/public/SchneeBaenke.jpeg" style="width:100%">
-				</div>
-		
-				<div class="mySlides fade">
-					<div class="numbertext">5 / 14</div>
-					<img src="/public/schweinSchnee.jpeg" style="width:100%">
-				</div>
-		
-				<div class="mySlides fade">
-					<div class="numbertext">6 / 14</div>
-					<img src="/public/schweinSommer.jpeg" style="width:100%">
-				</div>			
-				<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 			</div>
 		</main>
 		<Footer />
@@ -147,15 +157,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             display: none;
         }
 	}
-
 	.slideshow-container {
-    max-width: 100%;
-    margin-top: -5%;
-    position: relative;
-}
-
+    	max-width: 100%;
+    	/* margin-top: -5%; */
+    	position: relative;
+	}
 .mySlides {
     display: none;
+	height: 50vh !important;
+	width: 40vw;
+	overflow: hidden;
+	border-radius: 10px;
+	margin: auto;
+	content: fit;
 }
 .prev, .next {
     cursor: pointer;
@@ -195,6 +209,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
     position: absolute;
     top: 0;
 }
+
 </style>
 
 <script>
@@ -226,3 +241,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         plusSlides(1);
     }, 3000);
 </script>
+
+<!-- TODO Karusell richitg macehn, auf Größe Anpassen und Richtige Bilder finden  -->
