@@ -170,3 +170,9 @@ hr {
 .read-more:hover {
 	color: var(--black);
 }
+
+.no-clickable {
+    pointer-events: none;
+    cursor: default; /* Ändert den Mauszeiger, um anzuzeigen, dass der Link nicht klickbar ist */
+	text-decoration: none;
+}
