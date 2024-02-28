@@ -69,11 +69,19 @@ import Overlay from '../components/Overlay.astro';
 			margin-left:4%;
 			margin-right: 4%;
 		}
+		.banner {
+        	content: url('/bannerMobile.AVIF'); /* Hier den Pfad zum anderen Bild einfügen */
+    	}
 	}
 	@media (min-width: 1080px) {
 		.instagram-button, .instagram-logo {
 			display: none;
 		}
+	}
+	@media (max-width: 1080px) {
+		.banner {
+        	content: url('/bannerIpad.AVIF'); /* Hier den Pfad zum anderen Bild einfügen */
+    	}
 	}
     .instagram-button {
         position: fixed;
@@ -81,7 +89,6 @@ import Overlay from '../components/Overlay.astro';
         left: 20px;
         z-index: 1000;
     }
-
     .instagram-logo {
         width: 45px; 
         height: auto;
