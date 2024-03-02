@@ -64,8 +64,9 @@
             <img src="/schmalz.AVIF" style="width:100%" alt="Bild Slidshow">
         </div>
     
-        <a href="#" class="no-clickable next" onclick="plusSlides(1)">&#10095;</a>
-        <a href="#" class="no-clickable prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a href="#" class="next" onclick="plusSlides(1); event.preventDefault();">&#10095;</a>
+        <a href="#" class="prev" onclick="plusSlides(-1); event.preventDefault();">&#10094;</a>
+
     </div>
 </main>
 
@@ -92,6 +93,7 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    text-decoration: none;
 }
 
 .next {
