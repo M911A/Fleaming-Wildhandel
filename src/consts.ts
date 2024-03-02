@@ -3,5 +3,5 @@
 
 export const SITE_TITLE = 'Griebsch Fläming Wildhandel - Produkte aus Qualitätswild';
 export const SITE_DESCRIPTION = 'Willkommen auf der Fläming Wildhandel Website';
-export const favIcon = "../public/favicon.AVIF";
-export const overlayUrl = "/public/overlay.AVIF";
+export const favIcon = "../favicon.AVIF";
+export const overlayUrl = "/overlay.AVIF";
