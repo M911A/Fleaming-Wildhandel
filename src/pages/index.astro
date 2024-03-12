@@ -23,7 +23,7 @@ import Overlay from '../components/Overlay.astro';
 		<!-- <Overlay overlayUrl={overlayUrl} /> -->
 		<img alt="Banner Bild" class="banner" src="/banner.AVIF"> 
 		<main>
-			<h2>Wildbret - küchenfertig für Gastronomie und Feinkost</h2>
+			<h2 class="center-text">Wildbret - küchenfertig für Gastronomie und Feinkost</h2>
 			<InformationsPickture />
 			<br><br><br>
 			<h2>Einige unserer "Kostproben"</h2>
@@ -95,4 +95,9 @@ import Overlay from '../components/Overlay.astro';
         width: 45px; 
         height: auto;
     }
+
+	.center-text {
+		text-align: center;
+		margin-bottom: 10px;
+	}
 </style>
