@@ -166,13 +166,38 @@ hr {
 	white-space: nowrap;
 }
 
-
-.read-more:hover {
-	color: var(--black);
+.no-clickable {
+	pointer-events: none;
+	cursor: default; /* Ändert den Mauszeiger, um anzuzeigen, dass der Link nicht klickbar ist */
+	text-decoration: none;
 }
 
-.no-clickable {
-    pointer-events: none;
-    cursor: default; /* Ändert den Mauszeiger, um anzuzeigen, dass der Link nicht klickbar ist */
-	text-decoration: none;
+.read-more {
+    position: relative;
+    text-decoration: underline;
+    color: var(--accent); /* Standardfarbe des Textes */
+    transition: color 0.5s ease; /* Übergangseffekt für die Textfarbe */
+}
+
+/* Hintergrundeffekt für den Hover */
+.read-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, var(--green) 0%, var(--black) 100%); /* Farbverlauf von Grün zu Schwarz */
+    transition: width 0.5s ease; /* Übergangseffekt für die Breite des Farbverlaufs */
+    z-index: -1; /* Hintergrundebene hinter dem Text */
+}
+
+/* Hover-Effekt */
+.read-more:hover::before {
+    width: 100%; /* Breite des Farbverlaufs auf 100% erhöhen */
+}
+
+/* Hover-Effekt für die Textfarbe */
+.read-more:hover {
+    color: var(--white); /* Farbe des Textes beim Hover */
 }
