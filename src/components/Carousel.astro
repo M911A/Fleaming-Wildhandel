@@ -122,11 +122,14 @@
 </style>
 
 <script async>
-    let totalSlides;
+     let totalSlides;
     let slideIndex = 0;
+    let slideTimer;
 
     function plusSlides(n) {
+        stopSlideTimer(); 
         showSlides(slideIndex += n);
+        startSlideTimer(); 
     }
 
     function showSlides(n) {
@@ -144,9 +147,16 @@
         slides[slideIndex].style.display = "block";  
     }
 
-    showSlides(slideIndex);
+    function startSlideTimer() {
+        slideTimer = setInterval(function() {
+            plusSlides(1);
+        }, 3000);
+    }
 
-    setInterval(function() {
-        plusSlides(1);
-    }, 3000);
+    function stopSlideTimer() {
+        clearInterval(slideTimer);
+    }
+
+    showSlides(slideIndex);
+    startSlideTimer(); 
 </script>
