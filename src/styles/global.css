@@ -38,6 +38,19 @@
 	font-display: swap;
 }
 
+.borel-regular {
+	font-family: "Borel", cursive;
+	font-weight: 400;
+	font-style: normal;
+} 
+
+.playpen-sans {
+	font-family: "Playpen Sans", cursive;
+	font-optical-sizing: auto;
+	font-weight: auto;
+	font-style: normal;
+}
+
 body {
 	font-family: 'Atkinson', sans-serif;
 	margin: 0;
@@ -69,7 +82,7 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
 	line-height: 1.2;
-	font-family: 'Courgette', cursive;
+	font-family: 'Playpen Sans', cursive;
 }
 h1 {
 	font-size: 3.052em;
