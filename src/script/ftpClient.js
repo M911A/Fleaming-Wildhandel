@@ -1,7 +1,6 @@
 import ftp from 'basic-ftp';
 import dotenv from 'dotenv';
 
-// Lade die Umgebungsvariablen aus der .env-Datei
 dotenv.config();
 
 export async function fetchFromFTP() {
