@@ -11,6 +11,12 @@ import Partner from '../components/Partner.astro';
 import ImgTextImg from '../components/ImgTextImg.astro';
 import { SITE_TITLE, SITE_DESCRIPTION, overlayUrl } from '../consts';
 import Overlay from '../components/Overlay.astro';
+
+
+// import FTP
+import { fetchFromFTP } from '../script/ftpClient';
+const data = await fetchFromFTP();
+//import FTP
 ---
 
 <!doctype html>
