@@ -1,5 +1,8 @@
-// src/scripts/ftpClient.js
 import ftp from 'basic-ftp';
+import dotenv from 'dotenv';
+
+// Lade die Umgebungsvariablen aus der .env-Datei
+dotenv.config();
 
 export async function fetchFromFTP() {
     const client = new ftp.Client();
@@ -7,9 +10,9 @@ export async function fetchFromFTP() {
 
     try {
         await client.access({
-            host: "hosting188451.ae8d3.netcup.net",
-            user: "wildhandel",
-            password: "6T2r!rh14",
+            host: process.env.FTP_HOST,
+            user: process.env.FTP_USER,
+            password: process.env.FTP_PASSWORD,
             secure: true
         });
 
@@ -18,7 +21,7 @@ export async function fetchFromFTP() {
         return list;
     } catch (err) {
         console.error(err);
+    } finally {
+        client.close();
     }
-
-    client.close();
 }
