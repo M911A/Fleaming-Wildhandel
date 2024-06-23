@@ -13,7 +13,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, overlayUrl } from '../consts';
 import Overlay from '../components/Overlay.astro';
 
 
-import { fetchFromFTP } from '../script/ftpClient';
+import { fetchFromFTP } from '../../ftpClient'
 const data = await fetchFromFTP();
 ---
 
